@@ -1,24 +1,13 @@
-**Image Downloader with docker container**
-
-**How to run with the docker container:**
+**How to run:**
   1. Clone this repository:
       > git clone https://github.com/diprasetyamr/imageDownloader.git
 
       > cd imageDownloader
 
-  2. Build the docker container with docker-compose:
-      > docker-compose up --build
-
-**How to run without the docker container:**
-  1. Clone this repository:
-      > git clone https://github.com/diprasetyamr/imageDownloader.git
-
-      > cd imageDownloader
-
-  2. Go to folder docker:
-      > cd docker
-
-  3. Execute the imageDownloader:
+  2. Execute the imageDownloader:
       > python3 imageDownloader
 
+  3. Execute the imageDownloader with custom urllist file:
+      > python3 imageDownloader filename
+      
 NOTE: Change to linux container if you install docker on Windows.
