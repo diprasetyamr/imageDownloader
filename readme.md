@@ -11,10 +11,10 @@
   1. Clone this repository:
       > git clone https://github.com/diprasetyamr/imageDownloader.git
 
-  2. Go to folder docker/imageDownloader:
-      > cd docker/imageDownloader
+  2. Go to folder docker:
+      > cd docker
 
   3. Execute the main.py file:
-      > python3 main.py
+      > python3 imageDownloader
 
 NOTE: Change to linux container if you install docker on Windows.
