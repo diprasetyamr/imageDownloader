@@ -3,6 +3,7 @@
 **How to run with the docker container:**
   1. Clone this repository:
       > git clone https://github.com/diprasetyamr/imageDownloader.git
+
       > cd imageDownloader
 
   2. Build the docker container with docker-compose:
@@ -11,6 +12,7 @@
 **How to run without the docker container:**
   1. Clone this repository:
       > git clone https://github.com/diprasetyamr/imageDownloader.git
+      
       > cd imageDownloader
 
   2. Go to folder docker/imageDownloader:
