@@ -1,8 +1,6 @@
 **How to run:**
   1. Clone this repository:
-      > git clone https://github.com/diprasetyamr/imageDownloader.git
-
-      > cd imageDownloader
+      > git clone https://github.com/diprasetyamr/imageDownloader.git .
 
   2. Execute the imageDownloader with default urllist file (listUrl.txt):
       > python3 imageDownloader
