@@ -1,6 +1,11 @@
 import urllib.request
+import os
 
 def downloadImageFromFile(urlfile):
+    saveFolder = 'images'
+    if not os.path.exists(saveFolder):
+        os.makedirs(saveFolder)
+
     with open(urlfile, encoding='utf-8') as f:
         for lines in f.readlines():
             # Remove \n from the string
@@ -10,7 +15,7 @@ def downloadImageFromFile(urlfile):
             filename = url.split("/")
 
             print("Downloading from:", url)
-            print("Status:", download_file(url, filename[len(filename) - 1]))
+            print("Status:", download_file(url, os.path.join(saveFolder, filename[len(filename) - 1])))
 
 def download_file(url, filename):
     try:
