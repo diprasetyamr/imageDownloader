@@ -17,28 +17,34 @@ def downloadImageFromFile(urlfile):
             print("Downloading from:", url)
             print("Status:", download_file(url, os.path.join(saveFolder, filename[len(filename) - 1])))
 
+
+# def check_url():
+
+
 def download_file(url, filename):
     try:
         # Fix for HTTP 403 Forbidden
         req = urllib.request.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' })
+        try:
+            res = urllib.request.urlopen(req)
+            meta = res.info()
 
-        res = urllib.request.urlopen(req)
-        meta = res.info()
-
-        # Download only image file
-        if (meta["Content-Type"]).split("/")[0] == "image":
-            if meta["Content-Length"] is not None:
-                filesize = int(meta["Content-Length"])
-                print("File Size: %.2f kb"%(filesize/1024))
-            with open(filename, 'wb') as f:
-                while True:
-                    buffer = res.read(1024)
-                    if not buffer: break
-                    f.write(buffer)
-            res.close()
-            return "Image Downloaded"
-        else:
-            res.close()
-            return "Image Not Found"
+            # Download only image file
+            if (meta["Content-Type"]).split("/")[0] == "image":
+                if meta["Content-Length"] is not None:
+                    filesize = int(meta["Content-Length"])
+                    print("File Size: %.2f kb"%(filesize/1024))
+                with open(filename, 'wb') as f:
+                    while True:
+                        buffer = res.read(1024)
+                        if not buffer: break
+                        f.write(buffer)
+                res.close()
+                return "Image Downloaded"
+            else:
+                res.close()
+                return "Image Not Found"
+        except Exception as e:
+            return e
     except Exception as e:
-        return e.reason
+        return e
