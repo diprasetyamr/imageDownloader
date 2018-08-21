@@ -6,6 +6,7 @@ def check_url(url):
         # Try to build request
         req = urllib.request.Request(
             url, headers={'User-Agent': 'Mozilla/5.0'})
+
         return True
     except Exception as e:
         return False
@@ -19,6 +20,7 @@ def downloadImageFromFile(urlfile):
 
     with open(urlfile, encoding='utf-8') as f:
         for lines in f.readlines():
+
             # Remove \n from the string
             url = lines[:len(lines) - 1:]
 
@@ -38,6 +40,8 @@ def download_file(url, filename):
         try:
             # Try to send the request and get the respond
             res = urllib.request.urlopen(req)
+
+            # Get the metadata from the respond
             meta = res.info()
 
             # Download image file only
@@ -58,6 +62,7 @@ def download_file(url, filename):
                         if not buffer:
                             break
                         f.write(buffer)
+
                 res.close()
                 return "Image Downloaded"
             else:
