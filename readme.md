@@ -12,13 +12,13 @@
 **How to run without the docker container:**
   1. Clone this repository:
       > git clone https://github.com/diprasetyamr/imageDownloader.git
-      
+
       > cd imageDownloader
 
-  2. Go to folder docker/imageDownloader:
-      > cd docker/imageDownloader
+  2. Go to folder docker:
+      > cd docker
 
-  3. Execute the main.py file:
-      > python3 main.py
+  3. Execute the imageDownloader:
+      > python3 imageDownloader
 
 NOTE: Change to linux container if you install docker on Windows.
