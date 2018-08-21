@@ -16,3 +16,5 @@
 
   3. Execute the main.py file:
       > python3 main.py
+
+NOTE: Change to linux container if you install docker on Windows.
