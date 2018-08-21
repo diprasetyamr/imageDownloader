@@ -1,6 +1,6 @@
 import urllib.request
 
-def downloadImage(urlfile):
+def downloadImageFromFile(urlfile):
     with open(urlfile, encoding='utf-8') as f:
         for lines in f.readlines():
             # Remove \n from the string
