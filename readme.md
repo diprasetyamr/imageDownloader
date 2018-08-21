@@ -4,8 +4,8 @@
 
       > cd imageDownloader
 
-  2. Execute the imageDownloader:
+  2. Execute the imageDownloader with default urllist file (listUrl.txt):
       > python3 imageDownloader
 
-  2.1 Execute the imageDownloader with custom urllist file:
+  3. Execute the imageDownloader with custom urllist file:
       > python3 imageDownloader filename
