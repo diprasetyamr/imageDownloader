@@ -1,6 +1,6 @@
 **How to run:**
   1. Clone this repository:
-      > git clone https://github.com/diprasetyamr/imageDownloader.git
+      > git clone https://github.com/diprasetyamr/imageDownloader.git .
 
       > cd imageDownloader
 
