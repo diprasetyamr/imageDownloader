@@ -10,11 +10,11 @@ def downloadImageFromFile(urlfile):
             filename = url.split("/")
 
             print("Downloading from:", url)
-            print("Status:", download_file(lines, filename[len(filename) - 1]))
+            print("Status:", download_file(url, filename[len(filename) - 1]))
 
 def download_file(url, filename):
     try:
-        # Add header to the request, to fix 403 Forbidden problem
+        # Fix for HTTP 403 Forbidden
         req = urllib.request.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' })
 
         res = urllib.request.urlopen(req)
@@ -36,4 +36,4 @@ def download_file(url, filename):
             res.close()
             return "Image Not Found"
     except Exception as e:
-        return "Image Not Found"
+        return e.reason
